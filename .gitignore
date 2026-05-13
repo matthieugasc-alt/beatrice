@@ -1,9 +1,89 @@
-venv/
-uploads/
-__pycache__/
-*.pyc
+# ---------------------------------------------------------------------------
+# Secrets & environnement local
+# ---------------------------------------------------------------------------
 .env
-*.log
-_duplicates/
-hash_index.json
+.env.local
+.env.*.local
+*.key
+*.pem
+*.p12
+secrets/
+private/
+
+# ---------------------------------------------------------------------------
+# Données métier — JAMAIS dans le repo
+# ---------------------------------------------------------------------------
+uploads/
+!uploads/.gitkeep
 beatrice_output.csv
+hash_index.json
+*_log.csv
+*_hash_index.json
+*_log_*.csv
+
+# Aucun CSV/JSON de données à la racine — uniquement les fichiers de config
+/*.csv
+/*.json
+!package.json
+!package-lock.json
+!tsconfig.json
+
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtualenvs
+venv/
+env/
+ENV/
+.venv/
+.python-version
+
+# Tests / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+.tox/
+.mypy_cache/
+.ruff_cache/
+
+# ---------------------------------------------------------------------------
+# Logs & runtime
+# ---------------------------------------------------------------------------
+*.log
+logs/
+*.pid
+
+# ---------------------------------------------------------------------------
+# Éditeurs / OS
+# ---------------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# ---------------------------------------------------------------------------
+# Docker / build
+# ---------------------------------------------------------------------------
+*.tar
+*.tar.gz
+docker-compose.override.yml
+
+# ---------------------------------------------------------------------------
+# Backups
+# ---------------------------------------------------------------------------
+*.bak
+*.backup
+*.orig
