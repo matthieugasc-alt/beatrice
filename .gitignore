@@ -1,0 +1,9 @@
+venv/
+uploads/
+__pycache__/
+*.pyc
+.env
+*.log
+_duplicates/
+hash_index.json
+beatrice_output.csv
